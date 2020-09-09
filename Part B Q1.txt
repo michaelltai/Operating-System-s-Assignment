@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "1. Username is: $USER"
+uname -r
+nproc 
+pwd
+hostname -I | awk '{print $1}'
+cat /proc/meminfo | grep MemTotal
+cat /proc/meminfo | grep MemFree
+ls -l /dev /dev/mapper |grep '^b'
+cat /sys/block/sda/queue/scheduler
+cat /proc/sys/kernel/sched_latency_ns
+whereis firefox

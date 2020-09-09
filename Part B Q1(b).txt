@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while true
+do
+	ps -eLf | grep firefox | awk '{SUM += $5} END {print SUM}' | tee -a morzilla.log
+	sleep $1
+done
